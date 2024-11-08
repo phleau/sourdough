@@ -21,4 +21,4 @@ if st.button("💧 Get Water Temp "):
     st.success(f"🥄 The water temperature should be: **{watertemperatuur:.2f}°C**")
 
 # Personal note
-st.markdown("<br><sub>Created with ❤️ by Flo</sub>", unsafe_allow_html=True)
+st.markdown("<br><sub> ❤️ xFlo</sub>", unsafe_allow_html=True)
