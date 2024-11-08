@@ -3,7 +3,7 @@ import streamlit as st
 def bereken_watertemperatuur(omgeving_en_meel_temp, gewenste_deeg_temp, frictie_factor):
     return 3 * gewenste_deeg_temp - omgeving_en_meel_temp * 2 - frictie_factor
 
-st.title("What temperature should the water be?")
+st.title("Optimal water temp °C for Sourdough")
 st.write("When making sourdough bread, you can use this calculator to determine the optimal temperature for your water.")
 st.write("Assuming the room and flour temperature are the same:")
 
