@@ -7,7 +7,7 @@ def bereken_watertemperatuur(omgeving_en_meel_temp, gewenste_deeg_temp, frictie_
 st.title("Water Temp Guide")
 
 # Friendly, engaging description with emojis
-st.markdown("<h4>Calculate the optimal water temperature for your dough!<br> Assuming room and flour temps are the same</h4>", unsafe_allow_html=True)
+st.markdown("<h4>Calculate the optimal water temperature for your dough!<br> Assuming room and flour temps are the same", unsafe_allow_html=True)
 
 # Input fields with clear labels and logical order
 omgeving_en_meel_temp = st.number_input("🌡️ Room & Flour Temperature (°C)", min_value=-20, max_value=50, value=20)
