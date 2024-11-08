@@ -5,7 +5,7 @@ def bereken_watertemperatuur(omgeving_en_meel_temp, gewenste_deeg_temp, frictie_
 
 st.title("Calculator: water temperature for making sourdough bread")
 st.write("Determine the optimal temperature for your water")
-st.write("assuming the room and flour temperature are the same:")
+st.write("Assuming the room and flour temperature are the same:")
 
 # Eén inputveld voor zowel kamertemperatuur als meeltemperatuur
 omgeving_en_meel_temp = st.number_input("Room and flour temperature (°C)", min_value=-20, max_value=50, value=20)
