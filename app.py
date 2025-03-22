@@ -1,3 +1,3 @@
 import streamlit as st
+st.switch_page("Bake Studio Flo")
 
-st.switch_page("bake studio flo")
