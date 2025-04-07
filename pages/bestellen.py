@@ -7,7 +7,7 @@ st.title("Place your order")
 
 # 🔽 Replace with your actual GitHub raw file URL
 PRODUCTS_URL = "https://raw.githubusercontent.com/phleau/sourdough/main/data/products.json"
-GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzV1eBEm4x-DRHt-1zhTE5rQq_fS1QapjRhG-ZSFq-VxWXEFPJAgBLVyowlWW6wsZO8/exec"
+GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx-8F95kq9CtuipGsoptETgTAetgo7t2QTR2NRZtaFs9MkuS5vlRSfmsod_9uh1pAWN/exec"
 
 
 try:
