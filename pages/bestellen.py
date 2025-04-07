@@ -12,22 +12,25 @@ if name:
         
         order = {}
 
-        # Sourdough bread
-        want_bread = st.checkbox("Sourdough bread", key="want_bread")
-        if want_bread:
-            quantity_bread = st.number_input("Number of loaves (max 2)", min_value=1, max_value=2, step=1, key="qty_bread")
+        st.markdown("**Sourdough bread**")
+        quantity_bread = st.selectbox(
+            "Number of loaves", options=[0, 1, 2], index=0, key="qty_bread"
+        )
+        if quantity_bread > 0:
             order["Sourdough bread"] = quantity_bread
 
-        # Croissant
-        want_croissant = st.checkbox("Croissant", key="want_croissant")
-        if want_croissant:
-            quantity_croissant = st.number_input("Number of croissants (max 3)", min_value=1, max_value=3, step=1, key="qty_croissant")
+        st.markdown("**Croissant**")
+        quantity_croissant = st.selectbox(
+            "Number of croissants", options=[0, 1, 2, 3], index=0, key="qty_croissant"
+        )
+        if quantity_croissant > 0:
             order["Croissant"] = quantity_croissant
 
-        # Brioche
-        want_brioche = st.checkbox("Brioche", key="want_brioche")
-        if want_brioche:
-            quantity_brioche = st.number_input("Number of brioches (max 2)", min_value=1, max_value=2, step=1, key="qty_brioche")
+        st.markdown("**Brioche**")
+        quantity_brioche = st.selectbox(
+            "Number of brioches", options=[0, 1, 2], index=0, key="qty_brioche"
+        )
+        if quantity_brioche > 0:
             order["Brioche"] = quantity_brioche
 
         submitted = st.form_submit_button("Submit order")
