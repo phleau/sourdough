@@ -45,5 +45,20 @@ if name:
                 st.success(f"Thank you, {name}! Your order has been submitted.")
                 for item, qty in order.items():
                     st.write(f"- {qty} x {item}")
+
+                # 🔄 Send data to Google Sheet
+                payload = {
+                    "name": name,
+                    **order
+                }
+
+                try:
+                    r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
+                    if r.status_code == 200:
+                        st.info("Your order was saved.")
+                    else:
+                        st.warning("Could not confirm if order was saved.")
+                except Exception as e:
+                    st.error(f"Failed to send order to Google Sheet: {e}")
 else:
     st.info("Please enter your name to begin your order.")
