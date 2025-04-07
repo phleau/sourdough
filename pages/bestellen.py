@@ -6,7 +6,7 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 # 🔽 Load products.json from GitHub
-PRODUCTS_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/data/products.json"
+PRODUCTS_URL = "https://raw.githubusercontent.com/phleau/sourdough/main/data/products.json"
 
 try:
     response = requests.get(PRODUCTS_URL)
