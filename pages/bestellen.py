@@ -33,8 +33,7 @@ if name:
                 index=0,
                 key=f"qty_{product_name}"
             )
-            if quantity > 0:
-                order[product_name] = quantity
+            order[product_name] = quantity
 
         submitted = st.form_submit_button("Submit order")
 
