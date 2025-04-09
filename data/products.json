@@ -1,10 +1,4 @@
 {
-  "Lemon & bergamot meringue tartelette (dairy free) (4 euro)": {
-    "per_person": 2,
-    "total_available": 30
-  },
-  "Wild garlic focaccia (vg) (4 euro)": {
-    "per_person": 2,
-    "total_available": 27
-  }
+  "Lemon & bergamot meringue tartelette (dairy free) (4 euro)": 2,
+  "Wild garlic focaccia (vg) (4 euro)": 2
 }
