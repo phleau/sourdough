@@ -12,4 +12,4 @@ This Saturday (12th of April), doing a small pick-up session!
       
 - Wild garlic focaccia (4 euro) (vegan)
       Ingredients: flour, olive oil, salt, foraged wild garlic (all organic)
-"")
+""")
