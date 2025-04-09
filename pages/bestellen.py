@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import requests
+import pandas as pd
 
 st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
@@ -38,26 +39,40 @@ if name:
         submitted = st.form_submit_button("Submit order")
 
         if submitted:
-            if not order:
-                st.error("Please select at least one item to order.")
+            st.success(f"Thank you, {name}! Your order has been submitted.")
+            for item, qty in order.items():
+            st.write(f"- {qty} x {item}")
+
+        # 🔄 Send data to Google Sheet
+            payload = {
+            "name": name,
+            **order
+        }
+    
+        try:
+            r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
+            if r.status_code == 200:
+                st.info("Your order was saved.")
             else:
-                st.success(f"Thank you, {name}! Your order has been submitted.")
-                for item, qty in order.items():
-                    st.write(f"- {qty} x {item}")
-
-                # 🔄 Send data to Google Sheet
-                payload = {
-                    "name": name,
-                    **order
-                }
-
-                try:
-                    r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
-                    if r.status_code == 200:
-                        st.info("Your order was saved.")
-                    else:
-                        st.warning("Could not confirm if order was saved.")
-                except Exception as e:
-                    st.error(f"Failed to send order to Google Sheet: {e}")
+                st.warning("Could not confirm if order was saved.")
+        except Exception as e:
+            st.error(f"Failed to send order to Google Sheet: {e}")
 else:
     st.info("Please enter your name to begin your order.")
+
+st.markdown("---")
+st.markdown("## 🧾 Recent Orders")
+
+ORDERS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKavwizrwv2x7OTaMWZXprZuabNQIXtuod3nMAnYPRUP4DewfR89Jw-Tv-9kYUNd0TvaRaWnRqWHbe/pubhtml?gid=0&single=true"
+
+def load_orders():
+    try:
+        df = pd.read_csv(ORDERS_CSV_URL)
+        return df
+    except Exception as e:
+        st.error("Could not load order data.")
+        return None
+
+df_orders = load_orders()
+if df_orders is not None:
+    st.dataframe(df_orders.tail(10))  # Show the last 10 orders
