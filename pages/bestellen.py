@@ -27,7 +27,7 @@ if name:
         for product_name, max_qty in products.items():
             product_name)
             quantity = st.selectbox(
-                product_name.lower()",
+                product_name.lower(),
                 options=list(range(0, max_qty + 1)),
                 index=0,
                 key=f"qty_{product_name}"
