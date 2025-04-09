@@ -30,15 +30,18 @@ if name:
         order = {}
 
         for product_name, max_qty in products.items():
-            quantity = st.selectbox(
-                product_name,
-                options=list(range(0, max_qty + 1)),
-                index=0,
-                key=f"qty_{product_name}"
-            )
-            order[product_name] = quantity
+            try:
+                quantity = st.selectbox(
+                    product_name,
+                    options=list(range(0, int(max_qty) + 1)),
+                    index=0,
+                    key=f"qty_{product_name}"
+                )
+                order[product_name] = quantity
+            except Exception as e:
+                st.error(f"Invalid quantity for {product_name}. Please check the product data.")
 
-            submitted = st.form_submit_button("Submit order")
+        submitted = st.form_submit_button("Submit order")
 
         if submitted:
             st.success(f"Thank you, {name}! Your order has been submitted.")
