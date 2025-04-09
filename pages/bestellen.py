@@ -16,15 +16,11 @@ ORDERS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKavwizrwv2x7
 try:
     response = requests.get(PRODUCTS_URL)
     response.raise_for_status()
-    products = response.json()
+    product_config = response.json()
+    product_names = list(product_config.keys())
 except Exception as e:
     st.error("Could not load product list. Please try again later.")
     st.stop()
-
-# Inventory caps (total max for everyone combined)
-INVENTORY_LIMITS = {
-    "Focaccia": 27  # Add more items as needed
-}
 
 # Load previous orders
 @st.cache_data(ttl=60)
@@ -38,9 +34,9 @@ def load_orders():
 df_orders = load_orders()
 
 # Compute already ordered quantities
-total_ordered = {product: 0 for product in products}
+total_ordered = {product: 0 for product in product_names}
 if df_orders is not None and not df_orders.empty:
-    for product in products:
+    for product in product_names:
         if product in df_orders.columns:
             total_ordered[product] = df_orders[product].fillna(0).astype(int).sum()
 
@@ -52,9 +48,11 @@ if name:
         st.markdown("### What would you like to order?")
         order = {}
 
-        for product_name, max_per_person in products.items():
+        for product_name in product_names:
+            config = product_config[product_name]
+            max_per_person = config.get("per_person", 10)
+            max_total = config.get("total_available")
             already_ordered = total_ordered.get(product_name, 0)
-            max_total = INVENTORY_LIMITS.get(product_name)
 
             if max_total is not None:
                 remaining_stock = max(0, max_total - already_ordered)
@@ -62,7 +60,6 @@ if name:
             else:
                 max_available = max_per_person
 
-            st.markdown(f"**{product_name}**")
             if max_total is not None:
                 st.caption(f"{remaining_stock} remaining out of {max_total}")
 
