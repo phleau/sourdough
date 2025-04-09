@@ -22,24 +22,6 @@ except Exception as e:
     st.error("Could not load product list. Please try again later.")
     st.stop()
 
-# Load previous orders
-@st.cache_data(ttl=60)
-def load_orders():
-    try:
-        df = pd.read_csv(ORDERS_CSV_URL)
-        return df
-    except Exception:
-        return None
-
-df_orders = load_orders()
-
-# Compute already ordered quantities
-total_ordered = {product: 0 for product in product_names}
-if df_orders is not None and not df_orders.empty:
-    for product in product_names:
-        if product in df_orders.columns:
-            total_ordered[product] = df_orders[product].fillna(0).astype(int).sum()
-
 # Order form
 name = st.text_input("Your name")
 
@@ -51,21 +33,9 @@ if name:
         for product_name in product_names:
             config = product_config[product_name]
             max_per_person = config.get("per_person", 10)
-            max_total = config.get("total_available")
-            already_ordered = total_ordered.get(product_name, 0)
-
-            if max_total is not None:
-                remaining_stock = max(0, max_total - already_ordered)
-                max_available = min(max_per_person, remaining_stock)
-            else:
-                max_available = max_per_person
-
-            if max_total is not None:
-                st.caption(f"{remaining_stock} remaining out of {max_total}")
-
             quantity = st.selectbox(
                 product_name,
-                options=list(range(0, max_available + 1)),
+                options=list(range(0, max_per_person + 1)),
                 index=0,
                 key=f"qty_{product_name}"
             )
@@ -87,8 +57,6 @@ if name:
                 r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
                 if r.status_code == 200:
                     st.info("Your order was saved.")
-                    st.cache_data.clear()
-                    df_orders = load_orders()
                 else:
                     st.warning("Could not confirm if order was saved.")
             except Exception as e:
@@ -100,6 +68,15 @@ else:
 st.markdown("---")
 st.markdown("## 🗏️ Recent Orders")
 
+@st.cache_data(ttl=60)
+def load_orders():
+    try:
+        df = pd.read_csv(ORDERS_CSV_URL)
+        return df
+    except Exception:
+        return None
+
+df_orders = load_orders()
 if df_orders is not None and not df_orders.empty:
     st.dataframe(df_orders.tail(10).iloc[::-1])
 else:
