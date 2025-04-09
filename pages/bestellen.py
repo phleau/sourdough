@@ -2,7 +2,6 @@ import streamlit as st
 import json
 import requests
 import pandas as pd
-from datetime import datetime
 
 st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
@@ -30,16 +29,13 @@ if name:
         order = {}
 
         for product_name, max_qty in products.items():
-            try:
-                quantity = st.selectbox(
-                    product_name,
-                    options=list(range(0, int(max_qty) + 1)),
-                    index=0,
-                    key=f"qty_{product_name}"
-                )
-                order[product_name] = quantity
-            except Exception as e:
-                st.error(f"Invalid quantity for {product_name}. Please check the product data.")
+            quantity = st.selectbox(
+                product_name,
+                options=list(range(0, max_qty + 1)),
+                index=0,
+                key=f"qty_{product_name}"
+            )
+            order[product_name] = quantity
 
         submitted = st.form_submit_button("Submit order")
 
@@ -66,7 +62,7 @@ else:
 
 # Show recent orders
 st.markdown("---")
-st.markdown("## 🗏️ Recent Orders")
+st.subheader("📋 Recent Orders")
 
 @st.cache_data(ttl=60)
 def load_orders():
