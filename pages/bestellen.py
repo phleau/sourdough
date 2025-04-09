@@ -87,6 +87,8 @@ if name:
                 r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
                 if r.status_code == 200:
                     st.info("Your order was saved.")
+                    st.cache_data.clear()
+                    df_orders = load_orders()
                 else:
                     st.warning("Could not confirm if order was saved.")
             except Exception as e:
