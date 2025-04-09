@@ -2,13 +2,17 @@ import streamlit as st
 import json
 import requests
 import pandas as pd
+from datetime import datetime
 
 st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
+# URLs
 PRODUCTS_URL = "https://raw.githubusercontent.com/phleau/sourdough/main/data/products.json"
 GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxM-cSYgKyKtn0iOVhVa8JFWS2QwfWSnf9MsKIRGEmS1VGAqd-y5BDTK4EXa8bkIDv/exec"
+ORDERS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKavwizrwv2x7OTaMWZXprZuabNQIXtuod3nMAnYPRUP4DewfR89Jw-Tv-9kYUNd0TvaRaWnRqWHbe/pub?gid=0&single=true&output=csv"
 
+# Load product list
 try:
     response = requests.get(PRODUCTS_URL)
     response.raise_for_status()
@@ -17,6 +21,30 @@ except Exception as e:
     st.error("Could not load product list. Please try again later.")
     st.stop()
 
+# Inventory caps (total max for everyone combined)
+INVENTORY_LIMITS = {
+    "Focaccia": 27  # Add more items as needed
+}
+
+# Load previous orders
+@st.cache_data(ttl=60)
+def load_orders():
+    try:
+        df = pd.read_csv(ORDERS_CSV_URL)
+        return df
+    except Exception:
+        return None
+
+df_orders = load_orders()
+
+# Compute already ordered quantities
+total_ordered = {product: 0 for product in products}
+if df_orders is not None and not df_orders.empty:
+    for product in products:
+        if product in df_orders.columns:
+            total_ordered[product] = df_orders[product].fillna(0).astype(int).sum()
+
+# Order form
 name = st.text_input("Your name")
 
 if name:
@@ -24,10 +52,23 @@ if name:
         st.markdown("### What would you like to order?")
         order = {}
 
-        for product_name, max_qty in products.items():
+        for product_name, max_per_person in products.items():
+            already_ordered = total_ordered.get(product_name, 0)
+            max_total = INVENTORY_LIMITS.get(product_name)
+
+            if max_total is not None:
+                remaining_stock = max(0, max_total - already_ordered)
+                max_available = min(max_per_person, remaining_stock)
+            else:
+                max_available = max_per_person
+
+            st.markdown(f"**{product_name}**")
+            if max_total is not None:
+                st.caption(f"{remaining_stock} remaining out of {max_total}")
+
             quantity = st.selectbox(
-                product_name.lower(),
-                options=list(range(0, max_qty + 1)),
+                product_name,
+                options=list(range(0, max_available + 1)),
                 index=0,
                 key=f"qty_{product_name}"
             )
@@ -40,7 +81,6 @@ if name:
             for item, qty in order.items():
                 st.write(f"- {qty} x {item}")
 
-            # 🔄 Send data to Google Sheet
             payload = {
                 "name": name,
                 **order
@@ -57,20 +97,11 @@ if name:
 else:
     st.info("Please enter your name to begin your order.")
 
-# Show previous orders
+# Show recent orders
 st.markdown("---")
-st.markdown("## 🧾 Recent Orders")
+st.markdown("## 🗏️ Recent Orders")
 
-ORDERS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKavwizrwv2x7OTaMWZXprZuabNQIXtuod3nMAnYPRUP4DewfR89Jw-Tv-9kYUNd0TvaRaWnRqWHbe/pub?gid=0&single=true&output=csv"
-
-def load_orders():
-    try:
-        df = pd.read_csv(ORDERS_CSV_URL)
-        return df
-    except Exception as e:
-        st.error("Could not load order data.")
-        return None
-
-df_orders = load_orders()
-if df_orders is not None:
-    st.dataframe(df_orders.tail(10).iloc[::-1])  # Show most recent orders first
+if df_orders is not None and not df_orders.empty:
+    st.dataframe(df_orders.tail(10).iloc[::-1])
+else:
+    st.info("No orders yet. Be the first to place one!")
