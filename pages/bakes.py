@@ -1,3 +1,5 @@
+import streamlit as st
+
 st.markdown("""
 **This Saturday (12th of April), doing a small pick-up session! You're welcome between 10h30-11h30**
 
