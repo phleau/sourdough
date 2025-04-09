@@ -25,9 +25,9 @@ if name:
         order = {}
 
         for product_name, max_qty in products.items():
-            st.markdown(f"**{product_name}**")
+            product_name)
             quantity = st.selectbox(
-                f"Number of {product_name.lower()}s",
+                product_name.lower()",
                 options=list(range(0, max_qty + 1)),
                 index=0,
                 key=f"qty_{product_name}"
