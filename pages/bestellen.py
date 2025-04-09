@@ -6,10 +6,8 @@ import pandas as pd
 st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
-# 🔽 Replace with your actual GitHub raw file URL
 PRODUCTS_URL = "https://raw.githubusercontent.com/phleau/sourdough/main/data/products.json"
 GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxM-cSYgKyKtn0iOVhVa8JFWS2QwfWSnf9MsKIRGEmS1VGAqd-y5BDTK4EXa8bkIDv/exec"
-
 
 try:
     response = requests.get(PRODUCTS_URL)
@@ -41,25 +39,26 @@ if name:
         if submitted:
             st.success(f"Thank you, {name}! Your order has been submitted.")
             for item, qty in order.items():
-            st.write(f"- {qty} x {item}")
+                st.write(f"- {qty} x {item}")
 
-        # 🔄 Send data to Google Sheet
+            # 🔄 Send data to Google Sheet
             payload = {
-            "name": name,
-            **order
-        }
-    
-        try:
-            r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
-            if r.status_code == 200:
-                st.info("Your order was saved.")
-            else:
-                st.warning("Could not confirm if order was saved.")
-        except Exception as e:
-            st.error(f"Failed to send order to Google Sheet: {e}")
+                "name": name,
+                **order
+            }
+
+            try:
+                r = requests.post(GOOGLE_APPS_SCRIPT_URL, json=payload)
+                if r.status_code == 200:
+                    st.info("Your order was saved.")
+                else:
+                    st.warning("Could not confirm if order was saved.")
+            except Exception as e:
+                st.error(f"Failed to send order to Google Sheet: {e}")
 else:
     st.info("Please enter your name to begin your order.")
 
+# Show previous orders
 st.markdown("---")
 st.markdown("## 🧾 Recent Orders")
 
@@ -75,4 +74,4 @@ def load_orders():
 
 df_orders = load_orders()
 if df_orders is not None:
-    st.dataframe(df_orders.tail(10))  # Show the last 10 orders
+    st.dataframe(df_orders.tail(10).iloc[::-1])  # Show most recent orders first
