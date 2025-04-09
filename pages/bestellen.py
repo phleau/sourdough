@@ -16,8 +16,7 @@ ORDERS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKavwizrwv2x7
 try:
     response = requests.get(PRODUCTS_URL)
     response.raise_for_status()
-    product_config = response.json()
-    product_names = list(product_config.keys())
+    products = response.json()
 except Exception as e:
     st.error("Could not load product list. Please try again later.")
     st.stop()
@@ -30,12 +29,10 @@ if name:
         st.markdown("### What would you like to order?")
         order = {}
 
-        for product_name in product_names:
-            config = product_config[product_name]
-            max_per_person = config.get("per_person", 10)
+        for product_name, max_qty in products.items():
             quantity = st.selectbox(
                 product_name,
-                options=list(range(0, max_per_person + 1)),
+                options=list(range(0, max_qty + 1)),
                 index=0,
                 key=f"qty_{product_name}"
             )
@@ -68,7 +65,7 @@ else:
 st.markdown("---")
 st.markdown("## 🗏️ Recent Orders")
 
-@st.cache_data(ttl=10)
+@st.cache_data(ttl=60)
 def load_orders():
     try:
         df = pd.read_csv(ORDERS_CSV_URL)
