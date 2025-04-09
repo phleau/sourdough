@@ -68,7 +68,7 @@ else:
 st.markdown("---")
 st.markdown("## 🗏️ Recent Orders")
 
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=10)
 def load_orders():
     try:
         df = pd.read_csv(ORDERS_CSV_URL)
