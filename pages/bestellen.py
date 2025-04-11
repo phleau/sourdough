@@ -74,6 +74,6 @@ def load_orders():
 
 df_orders = load_orders()
 if df_orders is not None and not df_orders.empty:
-    st.dataframe(df_orders.tail(10).iloc[::-1])
+    st.dataframe(df_orders.iloc[::-1])
 else:
     st.info("No orders yet. Be the first to place one!")
