@@ -6,6 +6,6 @@ st.markdown("""
 - 🥧 Lemon & bergamot meringue tartelette — **4€** (dairy free)  
   _Ingredients:_ *flour, sugar, plant-based butter, eggs, lemon, bergamot, salt (all organic)*  
 
-- 🌿 Wild garlic focaccia* — **4€** (vegan)  
+- 🌿 Wild garlic sourdough focaccia* — **4€** (vegan)  
   _Ingredients:_ *flour, olive oil, salt, foraged wild garlic (all organic)*
 """)
