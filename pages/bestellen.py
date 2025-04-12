@@ -7,7 +7,7 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday (12th of April), doing a small pick-up session! You're welcome between 11h30-10h30**
+**This Saturday (12th of April), doing a small pick-up session! You're welcome between 11h30-12h30**
 
 - 🥧 Lemon & bergamot meringue tartelette — **4€** (dairy free)  
   _Ingredients:_ *flour, sugar, plant-based butter, eggs, almond flour, cornstarch, lemon juice, lemon zest, bergamot, salt (all organic)*  
