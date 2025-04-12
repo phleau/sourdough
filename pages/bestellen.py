@@ -10,7 +10,7 @@ st.markdown("""
 **This Saturday (12th of April), doing a small pick-up session! You're welcome between 11h30-10h30**
 
 - 🥧 Lemon & bergamot meringue tartelette — **4€** (dairy free)  
-  _Ingredients:_ *flour, sugar, plant-based butter, eggs, lemon, bergamot, salt (all organic)*  
+  _Ingredients:_ *flour, sugar, plant-based butter, eggs, almond flour, cornstarch, lemon juice, lemon zest, bergamot, salt (all organic)*  
 
 - 🌿 Wild garlic sourdough focaccia* — **4€** (vegan)  
   _Ingredients:_ *flour, olive oil, salt, foraged wild garlic (all organic)*
