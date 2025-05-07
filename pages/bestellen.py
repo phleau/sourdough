@@ -7,13 +7,16 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday (12th of April), doing a small pick-up session! You're welcome between 11h30-12h30**
+**This Saturday (11th of May), doing a small pick-up session! You're welcome between 10h30–12h30**
 
-- 🥧 Lemon & bergamot meringue tartelette — **4€** (dairy free)  
-  _Ingredients:_ *flour, sugar, plant-based butter, eggs, almond flour, cornstarch, lemon juice, lemon zest, bergamot, salt (all organic)*  
+- 🍫 Decadent dark chocolate brownies with chocolate ganache & pink pepper — **3€** (vegan)  
+  _Ingredients:_ *sugar, vegan butter, unsweetened cocoa powder, flour, water, non-dairy chocolate, ground flax, vanilla extract, baking powder, salt, pink pepper (all organic)*
 
-- 🌿 Wild garlic sourdough focaccia* — **4€** (vegan)  
-  _Ingredients:_ *flour, olive oil, salt, foraged wild garlic (all organic)*
+- 🧀 Cheesy wild garlic scone — **3.5€**  
+  _Ingredients:_ *flour, butter, vegan buttermilk, parsley, Parmesan, baking powder, sugar, garlic (fresh & powder), baking soda, salt (all organic)*
+
+- 🍞 Sourdough breads — **4€** (max 18)  
+  _Ingredients:_ *wheat flour, wholewheat flour, water, sourdough starter, salt (from De Graanbroeders, all organic)*
 """)
 
 # URLs
