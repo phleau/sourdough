@@ -10,10 +10,10 @@ st.markdown("""
 **This Saturday (11th of May), doing a another pick-up session! You're welcome between 10h30–12h30**
 
 - 🍫 Decadent dark chocolate brownies with chocolate ganache & pink pepper — **3€** (vegan)  
-  _Ingredients:_ *sugar, vegan butter, unsweetened cocoa powder, flour, water, non-dairy chocolate, ground flax, vanilla extract, baking powder, salt, pink pepper (all organic)*
+  _Ingredients:_ *sugar, vegan butter, unsweetened cocoa powder, dark chocolate, flour, water, ground flax, vanilla, baking powder, salt, pink pepper (all organic)*
 
 - 🧀 Cheesy wild garlic scone — **3.5€**  
-  _Ingredients:_ *flour, butter, vegan buttermilk, parsley, Parmesan, baking powder, sugar, garlic (fresh & powder), baking soda, salt (all organic)*
+  _Ingredients:_ *flour, butter, vegan buttermilk, parsley, Parmesan, baking powder, sugar, wild garlic, baking soda, salt (all organic)*
 
 - 🍞 Sourdough breads — **4€** (max 18)  
   _Ingredients:_ *wheat flour, wholewheat flour (from graanbroeders), water, sourdough starter, salt (all organic)*
