@@ -7,7 +7,7 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday (11th of May), doing a small pick-up session! You're welcome between 10h30–12h30**
+**This Saturday (11th of May), doing a another pick-up session! You're welcome between 10h30–12h30**
 
 - 🍫 Decadent dark chocolate brownies with chocolate ganache & pink pepper — **3€** (vegan)  
   _Ingredients:_ *sugar, vegan butter, unsweetened cocoa powder, flour, water, non-dairy chocolate, ground flax, vanilla extract, baking powder, salt, pink pepper (all organic)*
