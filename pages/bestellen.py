@@ -54,6 +54,7 @@ if name:
 
         if submitted:
             st.success(f"Thank you, {name}! Your order has been submitted.")
+            st.cache_data.clear()
             for item, qty in order.items():
                 st.write(f"- {qty} x {item}")
 
