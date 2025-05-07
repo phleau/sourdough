@@ -16,7 +16,7 @@ st.markdown("""
   _Ingredients:_ *flour, butter, vegan buttermilk, parsley, Parmesan, baking powder, sugar, garlic (fresh & powder), baking soda, salt (all organic)*
 
 - 🍞 Sourdough breads — **4€** (max 18)  
-  _Ingredients:_ *wheat flour, wholewheat flour, water, sourdough starter, salt (from De Graanbroeders, all organic)*
+  _Ingredients:_ *wheat flour, wholewheat flour (from graanbroeders), water, sourdough starter, salt (all organic)*
 """)
 
 # URLs
