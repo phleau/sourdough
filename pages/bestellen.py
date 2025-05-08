@@ -53,7 +53,7 @@ if name:
         submitted = st.form_submit_button("Submit order")
 
         if submitted:
-            st.success(f"Thank you, {name}! Your order has been submitted.")
+            st.success(f"Thank you, {name}! Your order has been submitted.", disabled=True)
             st.cache_data.clear()
             for item, qty in order.items():
                 st.write(f"- {qty} x {item}")
