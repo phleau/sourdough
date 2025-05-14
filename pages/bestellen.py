@@ -9,13 +9,13 @@ st.title("Place your order")
 st.markdown("""
 **This Saturday 17th of May, another session! You're welcome between 10h30–12h30**
 
-- 🍓 Brioche buns with baked matcha crème pâtissière & strawberry–rhubarb compote — **3.5€**  
+- 🍓 Brioche bun with baked matcha crème pâtissière & strawberry–rhubarb compote — **3.5€**  
   _Ingredients:_ *flour, plant-based butter, eggs, plant-based milk, sourdough starter, yeast, sugar, salt, matcha, cornstarch, rhubarb, strawberries*
 
 - 🌿 Lemon, capers & salsa verde sourdough focaccia — **4€** (max 27 pieces)  
   _Ingredients:_ *wheat flour, water, sourdough starter, olive oil, salt, lemon peel, capers, coriander, parsley, dill*
 
-- 🌾 Fig fennel scones — **3.5€**  
+- 🌾 Fig fennel scone — **3.5€**  
   _Ingredients:_ *flour, plant-based butter, dried figs (non-colonized origin), sugar, salt, plant-based milk, baking powder, fennel seed*
 
 - 🍞 Spelt sesame sourdough (800g) — **4€** (max 18)  
