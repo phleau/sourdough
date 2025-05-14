@@ -7,17 +7,24 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday (11th of May), doing a another pick-up session! You're welcome between 10h30–12h30**
+**This Saturday 17th of May, another session! You're welcome between 10h30–12h30**
 
-- 🍫 Decadent dark chocolate brownies with chocolate ganache & pink pepper — **3€** (vegan)  
-  _Ingredients:_ *sugar, vegan butter, unsweetened cocoa powder, dark chocolate, flour, water, ground flax, vanilla, baking powder, salt, pink pepper (all organic)*
+- 🍓 Brioche buns with baked matcha crème pâtissière & strawberry–rhubarb compote — **3.5€**  
+  _Ingredients:_ *flour, plant-based butter, eggs, plant-based milk, sourdough starter, yeast, sugar, salt, matcha, cornstarch, rhubarb, strawberries*
 
-- 🧀 Cheesy wild garlic scone — **3.5€**  
-  _Ingredients:_ *flour, butter, vegan buttermilk, parsley, Parmesan, baking powder, sugar, wild garlic, baking soda, salt (all organic)*
+- 🌿 Lemon, capers & salsa verde sourdough focaccia — **4€** (max 27 pieces)  
+  _Ingredients:_ *wheat flour, water, sourdough starter, olive oil, salt, lemon peel, capers, coriander, parsley, dill*
 
-- 🍞 Sourdough breads — **4€** (max 18)  
-  _Ingredients:_ *wheat flour, wholewheat flour (from graanbroeders), water, sourdough starter, salt (all organic)*
+- 🌾 Fig fennel scones — **3.5€**  
+  _Ingredients:_ *flour, plant-based butter, dried figs (non-colonized origin), sugar, salt, plant-based milk, baking powder, fennel seed*
+
+- 🍞 Spelt sesame sourdough (800g) — **4€** (max 18)  
+  _Ingredients:_ *organic Graanbroeders spelt flour, water, sourdough starter, sesame seeds, salt*
+
+- 🥖 Bonus: some extra baguettes if Flo manages ;)
+All ingredients are organic
 """)
+
 
 # URLs
 PRODUCTS_URL = "https://raw.githubusercontent.com/phleau/sourdough/main/data/products.json"
