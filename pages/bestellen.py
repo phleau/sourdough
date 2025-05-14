@@ -22,6 +22,7 @@ st.markdown("""
   _Ingredients:_ *organic Graanbroeders spelt flour, water, sourdough starter, sesame seeds, salt*
 
 - 🥖 Bonus: some extra baguettes if Flo manages ;)
+
 All ingredients are organic
 """)
 
