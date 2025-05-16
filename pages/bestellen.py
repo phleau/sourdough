@@ -19,7 +19,7 @@ st.markdown("""
   _Ingredients:_ *flour, plant-based butter, dried figs (non-colonized origin), sugar, salt, plant-based milk, baking powder, fennel seed*
 
 - 🍞 Spelt sesame sourdough (800g) — **4€** (max 18)  
-  _Ingredients:_ *organic Graanbroeders spelt flour, water, sourdough starter, sesame seeds, salt*
+  _Ingredients:_ *organic Graanbroeders wholespelt flour, wheat flour, water, sourdough starter, sesame seeds, salt*
 
 - 🥖 Bonus: some extra baguettes if Flo manages ;)
 
