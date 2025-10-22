@@ -9,22 +9,20 @@ st.title("Place your order")
 st.markdown("""
 **This Saturday 17th of May, another session! You're welcome between 10h30–12h30**
 
-- 🍓 Brioche bun with baked matcha crème pâtissière & strawberry–rhubarb compote — **3.5€**  
-  _Ingredients:_ *flour, plant-based butter, eggs, plant-based milk, sourdough starter, yeast, sugar, salt, matcha, cornstarch, rhubarb, strawberries*
+- 🧄 Savoury wild garlic & parmesan scone — **3.5€** (max 2)  
+  _Ingredients:_ *flour, butter, milk, parmesan, wild garlic, baking powder, salt*
 
-- 🌿 Lemon, capers & salsa verde sourdough focaccia — **4€** (max 27 pieces)  
-  _Ingredients:_ *wheat flour, water, sourdough starter, olive oil, salt, lemon peel, capers, coriander, parsley, dill*
+- 🍇 Olive oil brioche with camembert, grapes & thyme — **3.5€** (max 2)  
+  _Ingredients:_ *flour, eggs, milk, olive oil, sugar, salt, camembert, grapes, thyme, yeast*
 
-- 🌾 Fig fennel scone — **3.5€**  
-  _Ingredients:_ *flour, plant-based butter, dried figs (non-colonized origin), sugar, salt, plant-based milk, baking powder, fennel seed*
+- 🌾 80% wholewheat sourdough bread (800g) — **4€** (max 18)  
+  _Ingredients:_ *wholewheat flour, wheat flour, water, sourdough starter, salt*
 
-- 🍞 Spelt sesame sourdough (800g) — **4€** (max 18)  
-  _Ingredients:_ *organic Graanbroeders wholespelt flour, wheat flour, water, sourdough starter, sesame seeds, salt*
-
-- 🥖 Bonus: some extra baguettes if Flo manages ;)
+- 🍫 Bonus: sourdough chocolate babka if Flo manages ;)
 
 All ingredients are organic
 """)
+
 
 
 # URLs
