@@ -56,7 +56,7 @@ if name:
             )
             order[product_name] = quantity
 
-        submitted = st.form_submit_button("Submit order", disabled = True)
+        submitted = st.form_submit_button("Submit order")
 
         if submitted:
             st.success(f"Thank you, {name}! Your order has been submitted.")
