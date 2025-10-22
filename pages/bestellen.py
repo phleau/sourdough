@@ -7,7 +7,7 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday 17th of May, another session! You're welcome between 10h30–12h30**
+**This Saturday 25th of October, another session! You're welcome between 10h30–12h30**
 
 - 🧄 Savoury wild garlic & parmesan scone — **3.5€** (max 2)  
   _Ingredients:_ *flour, butter, milk, parmesan, wild garlic, baking powder, salt*
