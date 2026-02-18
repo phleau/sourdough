@@ -7,20 +7,10 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday 25th of October, another session! You're welcome between 10h30–12h30**
+**This Saturday 21st of February, another session! You're welcome between 11–13h00**
 
-- 🧄 Savoury wild garlic & parmesan scone — **3.5€** (max 2)  
-  _Ingredients:_ *flour, butter, milk, parmesan, wild garlic, baking powder, salt*
-
-- 🍇 Olive oil brioche with camembert, grapes & thyme — **3.5€** (max 2)  
-  _Ingredients:_ *flour, eggs, milk, olive oil, sugar, salt, camembert, grapes, thyme, yeast*
-
-- 🌾 80% wholewheat sourdough bread (800g) — **4€** (max 18)  
-  _Ingredients:_ *wholewheat flour, wheat flour, water, sourdough starter, salt*
-
-- 🍫 Bonus: sourdough chocolate babka if Flo manages ;)
-
-All ingredients are organic
+A semla is a soft cardamom bun filled with almond paste and topped with mascarpone whipped cream, a Swedish classic. This week I'm making a few different flavours, 3.5€ each. Order below so I get a rough idea of how many to make!
+All ingredients are organic.
 """)
 
 
