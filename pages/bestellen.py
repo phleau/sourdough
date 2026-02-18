@@ -9,9 +9,10 @@ st.title("Place your order")
 st.markdown("""
 **This Saturday 21st of February, another session! You're welcome between 11–13h00**
 
-A semla is a brioche bun with cardamom filled with almond paste and topped with mascarpone whipped cream, a Swedish classic :)
+This week.... Semla!
+Abrioche bun with cardamom filled with almond paste and topped with mascarpone whipped vanilla cream, a Swedish classic :)
 
-This week I'm making a few different flavours, 3.5€ each. Order below so I get a rough idea of how many to make!
+Also making a few different flavours, 3.5€ each. Order below so I get a rough idea of how many to make!
 All ingredients are organic.
 """)
 
