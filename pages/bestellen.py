@@ -9,11 +9,18 @@ st.title("Place your order")
 st.markdown("""
 **This Saturday 11th of March, another session! You're welcome between 11–13h00**
 
-This week, a few options, sweet and savoury! 
-Sambal maple focaccia (2 euro). Ingredients: wheat flour, water, sourdough starter, salt, sambal (may contain fish sauce), maple syrup
-Malted choc pistachio cookie (1.5 euro). Ingredients: Flour, malt, plant based butter, sugar, baking powder, dark chocolate, pistachio
-Sourdough poppyseed bun (1.5 euro). Ingredients: Flour, rye flour, water, sourdough starter, salt, poppyseeds
-All ingredients are organic.
+This week, a few options, sweet and savoury!
+
+**Sambal maple focaccia** (2 euro)  
+Ingredients: wheat flour, water, sourdough starter, salt, sambal (may contain fish sauce), maple syrup
+
+**Malted choc pistachio cookie** (1.5 euro)  
+Ingredients: flour, malt, plant based butter, sugar, baking powder, dark chocolate, pistachio
+
+**Sourdough poppyseed bun** (1.5 euro)  
+Ingredients: flour, rye flour, water, sourdough starter, salt, poppyseeds
+
+*All ingredients are organic.*
 """)
 
 
