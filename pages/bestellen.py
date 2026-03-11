@@ -7,12 +7,12 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday 21st of February, another session! You're welcome between 11–13h00**
+**This Saturday 11th of March, another session! You're welcome between 11–13h00**
 
-This week.... Semla!
-Abrioche bun with cardamom filled with almond paste and topped with mascarpone whipped vanilla cream, a Swedish classic :)
-
-Also making a few different flavours, 3.5€ each. Order below so I get a rough idea of how many to make!
+This week, a few options, sweet and savoury! 
+Sambal maple focaccia (2 euro). Ingredients: wheat flour, water, sourdough starter, salt, sambal (may contain fish sauce), maple syrup
+Malted choc pistachio cookie (1.5 euro). Ingredients: Flour, malt, plant based butter, sugar, baking powder, dark chocolate, pistachio
+Sourdough poppyseed bun (1.5 euro). Ingredients: Flour, rye flour, water, sourdough starter, salt, poppyseeds
 All ingredients are organic.
 """)
 
@@ -49,7 +49,7 @@ if name:
             )
             order[product_name] = quantity
 
-        submitted = st.form_submit_button("Submit order", disabled = True)
+        submitted = st.form_submit_button("Submit order")
 
         if submitted:
             st.success(f"Thank you, {name}! Your order has been submitted.")
