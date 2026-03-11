@@ -21,6 +21,8 @@ Ingredients: flour, malt, plant based butter, sugar, baking powder, dark chocola
 Ingredients: flour, rye flour, water, sourdough starter, salt, poppyseeds
 
 *All ingredients are organic.*
+
+*Oh and a cheeky cheesecake might appear if I have extra time ;)*
 """)
 
 
