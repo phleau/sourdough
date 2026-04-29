@@ -23,6 +23,8 @@ Ingredients: flour, rye flour, water, sourdough starter, salt, poppyseeds
 *All ingredients are organic.*
 
 *Oh and you never know what else might appear if I have extra time ;)*
+
+FYI: sometimes your name might not appear directly, the cache is slow (like my bakery), wait a minute to refresh and watch it appear :)
 """)
 
 
