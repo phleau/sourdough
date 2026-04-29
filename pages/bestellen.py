@@ -24,7 +24,7 @@ Ingredients: flour, rye flour, water, sourdough starter, salt, poppyseeds
 
 *Oh and you never know what else might appear if I have extra time ;)*
 
-FYI: sometimes your name might not appear directly, the cache is slow (like my bakery), wait a minute to refresh and watch it appear :)
+FYI: sometimes your name might not appear directly, the cache is slow (like my bakery). Just wait a minute to refresh, it'll show up! :)"
 """)
 
 
