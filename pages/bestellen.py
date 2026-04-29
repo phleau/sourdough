@@ -7,22 +7,22 @@ st.set_page_config(page_title="Order", page_icon="📝")
 st.title("Place your order")
 
 st.markdown("""
-**This Saturday 11th of March, another session! You're welcome between 11–13h00**
+**This Saturday 2nd of May, another session! You're welcome between 10-11h30*
 
 This week, a few options, sweet and savoury!
 
-**Sambal maple focaccia** (2 euro)  
-Ingredients: wheat flour, water, sourdough starter, salt, sambal (may contain fish sauce), maple syrup
+**Wild Garlic Biscuit (or is it a scone?)** (3.5 euro)  
+Ingredients: flour, butter, millk, parmesan, wild garlic, baking powder, salt
 
-**Malted choc pistachio cookie** (1.5 euro)  
-Ingredients: flour, malt, plant based butter, sugar, baking powder, dark chocolate, pistachio
+**Lemon meringue tartelette** (3.5 euro)  
+Ingredients: flour, butter, sugar, cream, egg, cornstarch, lemon, yuzu
 
 **Sourdough poppyseed bun** (1.5 euro)  
 Ingredients: flour, rye flour, water, sourdough starter, salt, poppyseeds
 
 *All ingredients are organic.*
 
-*Oh and a cheeky cheesecake might appear if I have extra time ;)*
+*Oh and you never know what else might appear if I have extra time ;)*
 """)
 
 
