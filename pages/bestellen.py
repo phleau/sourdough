@@ -14,7 +14,7 @@ This week, a few options, sweet and savoury!
 **Wild Garlic Biscuit (or is it a scone?)** (3 euro)  
 Ingredients: flour, butter, millk, parmesan, wild garlic, baking powder, salt
 
-**Lemon meringue tartelette** (3.5 euro)  
+**SOLD OUT! Lemon meringue tartelette** (3.5 euro)  
 Ingredients: flour, butter, sugar, cream, egg, cornstarch, lemon, yuzu
 
 **Sourdough poppyseed bun** (1.5 euro)  
