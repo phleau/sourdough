@@ -15,7 +15,7 @@ This week, a few options, sweet and savoury!
 Ingredients: flour, butter, millk, parmesan, wild garlic, baking powder, salt
 
 **SOLD OUT! Lemon meringue tartelette** (3.5 euro)  
-Ingredients: flour, butter, sugar, cream, egg, cornstarch, lemon, yuzu
+Ingredients: flour, butter, sugar, almond flour, cream, egg, cornstarch, lemon, yuzu
 
 **Sourdough poppyseed bun** (1.5 euro)  
 Ingredients: flour, rye flour, water, sourdough starter, salt, poppyseeds
